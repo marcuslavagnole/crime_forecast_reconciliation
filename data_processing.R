@@ -6,8 +6,8 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 dados = read.csv2("data_base/base_crimes.csv")
 dados = dados[which(dados$mcirc=='3304557'),]
 
-### Formating data set
-# Formating date
+### Formatting data set
+# Formatting date
 dados$data = format(ISOdate(year = dados$ano, month = dados$mes, day = 01),"%m/%Y")
 
 # Selecting years of interest
