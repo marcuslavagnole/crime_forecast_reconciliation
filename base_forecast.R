@@ -23,7 +23,7 @@ foreach::getDoParRegistered()
 # How many workers are available? (optional)
 foreach::getDoParWorkers()
 
-## Set non gaussian state space model configurations
+## Set non-Gaussian state space model configurations
 Modelo  <- function(serie,n_prev){
   Zt <- matrix(c(1, 0), 1, 2)
   Ht <- matrix(NA)
