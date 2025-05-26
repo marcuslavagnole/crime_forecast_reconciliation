@@ -54,20 +54,20 @@ for(j in h){
     aux_recon_ols = combinef(fcasts = matrix(y_hat[,i],1,byrow=TRUE), groups = grupos$groups, 
                              weights = rep(1,271), nonnegative = FALSE, keep = 'all', algorithms = "lu")
     
-    # WLS_s covariance matrix - Non negative
+    # WLS_s covariance matrix - Non-negative
     aux_recon_atha_nonneg = combinef(fcasts = matrix(y_hat[,i],1,byrow=TRUE), groups = grupos$groups, 
                                      weights = aux_atha, nonnegative = TRUE, keep = 'all', algorithms = "lu")
     
-    # WLS_upsilon covariance matrix - Non negative
+    # WLS_upsilon covariance matrix - Non-negative
     aux_recon_wls_nonneg  = combinef(fcasts = matrix(y_hat[,i],1,byrow=TRUE), groups = grupos$groups, 
                                      weights = aux_wls, nonnegative = TRUE, keep = 'all', algorithms = "lu")
     
-    # MinT covariance matrix - Non negative
+    # MinT covariance matrix - Non-negative
     aux_recon_mint_nonneg = MinT(fcasts = matrix(y_hat[,i],1,byrow=TRUE), groups = grupos$groups, 
                                  residual = t(m_res), covariance = "shr", nonnegative = TRUE, keep = 'all', 
                                  algorithms = "lu")
     
-    # OLS covariance matrix - Non negative
+    # OLS covariance matrix - Non-negative
     aux_recon_ols_nonneg = combinef(fcasts = matrix(y_hat[,i],1,byrow=TRUE), groups = grupos$groups, 
                                     weights = rep(1,271), nonnegative = TRUE, keep = 'all', algorithms = "lu")
   
