@@ -4,8 +4,8 @@ Crime prediction based on reliable data and sound statistical methodologies can 
 
 The repo includes:
 
-- **data_processing.R** : code that manipulates the raw data set to generate useful data objects for the base forecasts and reconciliation;
-- **base_forecast.R** : code that generates base forecasts;
-- **reconciliation.R** : code that reconciles base forecasts;
+- (Step 1) **data_processing.R** : code that manipulates the raw data set to generate useful data objects for the base forecasts and reconciliation;
+- (Step 2) **base_forecast.R** : code that generates base forecasts;
+- (Step 3) **reconciliation.R** : code that reconciles base forecasts;
 - Directory **./data_base** contains the raw data set;
 - Directory **./data_treated** contains data objects generated in **data_processing.R**.
